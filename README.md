@@ -1,6 +1,17 @@
 # Microstructure-Informed Fatigue Crack-Growth Prediction in Stainless Steel
 
-This repository demonstrates a PhD-level computational workflow for fatigue crack-growth prediction in stainless steels using open/literature data, fracture-mechanics baselines, microstructure descriptors, and machine learning.
+## Project Summary
+
+This project develops a microstructure-informed framework for fatigue crack-growth prediction in austenitic stainless steel. Open/literature fatigue crack-growth datasets are combined with fracture-mechanics descriptors, microstructure-sensitive features, and machine-learning models to predict crack-growth rates.
+
+### Key Contributions
+
+- Physics-based Paris/Walker crack-growth modelling
+- Machine-learning prediction of fatigue crack-growth rate
+- Microstructure-sensitive feature engineering
+- DIC-inspired crack-tip analysis extension
+- Crystal-plasticity/RVE-inspired microstructure modelling extension
+- Reproducible Python workflow with uncertainty analysis
 
 ## Why this project exists
 
@@ -64,7 +75,7 @@ The NIMS entries are included as traceable references, not as extracted numeric 
 
 The repository implements:
 
-1. extraction of fatigue crack-growth curves from open datasets,
+1. Extraction of fatigue crack-growth curves from open datasets,
 2. Paris-law baseline fitting,
 3. feature engineering for loading and microstructure descriptors,
 4. machine-learning prediction of `log10(da/dN)`,
@@ -123,17 +134,6 @@ figures/ml_predicted_vs_true.png
 figures/feature_importance.png
 ```
 
-## Why this is relevant to a PhD on high-temperature structural integrity
-
-The project directly demonstrates transferable skills needed for microstructure-sensitive structural integrity research:
-
-- fatigue crack-growth modelling,
-- Paris-law and stress-intensity-factor reasoning,
-- stainless-steel data handling,
-- physics-guided feature engineering,
-- microstructure descriptors such as hardness, grain-size proxy, microstructure family, and material class,
-- machine-learning surrogate modelling,
-- transparent reporting of data limitations.
 
 ## Limitations and honest scope
 
@@ -154,59 +154,4 @@ The project directly demonstrates transferable skills needed for microstructure-
 
 Please cite the original dataset and literature sources when using this repository.
 
-## Added PhD-level extensions
 
-This upgraded version also includes two extension modules that make the project closer to the LiU PhD topic.
-
-### Extension 1: CrackPy / CrackMNIST-inspired DIC crack analysis
-
-Folder:
-
-```text
-extensions/crackpy_crackmnist/
-```
-
-This module adds a DIC-style crack-tip analysis demonstration. It generates a synthetic full-field displacement map, estimates the crack-tip location from displacement-gradient concentration, and extracts DIC-inspired fracture features. The folder is intentionally written as an integration scaffold rather than a copy of external third-party repositories.
-
-Run:
-
-```bash
-python extensions/crackpy_crackmnist/dic_crack_tip_demo.py
-```
-
-Outputs:
-
-```text
-extensions/crackpy_crackmnist/results/synthetic_dic_displacement_uy.png
-extensions/crackpy_crackmnist/results/synthetic_dic_gradient_crack_tip.png
-extensions/crackpy_crackmnist/results/dic_crack_tip_features.csv
-```
-
-### Extension 2: DAMASK / crystal-plasticity RVE-inspired microstructure module
-
-Folder:
-
-```text
-extensions/damask_crystal_plasticity/
-```
-
-This module addresses the microstructure-modelling gap. It creates a synthetic Voronoi polycrystal, assigns grain orientations and strength heterogeneity, and extracts RVE-level descriptors such as orientation statistics, boundary fraction, and a strain-localization proxy. It is designed as a practical bridge toward DAMASK or Abaqus UMAT crystal-plasticity work.
-
-Run:
-
-```bash
-python extensions/damask_crystal_plasticity/rve_microstructure_demo.py
-```
-
-Outputs:
-
-```text
-extensions/damask_crystal_plasticity/results/rve_grain_map.png
-extensions/damask_crystal_plasticity/results/rve_orientation_map.png
-extensions/damask_crystal_plasticity/results/rve_localization_proxy.png
-extensions/damask_crystal_plasticity/results/rve_microstructure_features.csv
-```
-
-## Important note on third-party projects
-
-This repository does not redistribute CrackPy, CrackMNIST, DAMASK, or Oxford Crystal Plasticity source code/data. The extension modules are original lightweight demonstrations and integration scaffolds. Future research versions can connect directly to those external packages following their respective licences and installation instructions.
