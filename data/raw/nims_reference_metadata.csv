@@ -1,0 +1,3 @@
+source,dataset,doi,url,use_in_repo
+NIMS MDR,SUS304 (18Cr-8Ni) stainless steel bars fatigue properties,10.11503/nims.1097,https://mdr.nims.go.jp/datasets/8556ae19-6df3-4fdf-8ba1-6ffcb75fe1f1,metadata_reference
+NIMS MDR,"SUS304-HP (18Cr-8Ni) hot rolled stainless steel plate, weld/base metals fatigue properties",10.11503/nims.1129,https://mdr.nims.go.jp/datasets/c709a75e-8cee-489e-b4df-26a24fbf98e7,metadata_reference
