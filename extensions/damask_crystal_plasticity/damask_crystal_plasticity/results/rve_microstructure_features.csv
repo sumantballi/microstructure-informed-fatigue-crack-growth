@@ -1,0 +1,2 @@
+n_grains,mean_grain_area_fraction,std_grain_area_fraction,mean_orientation_deg,std_orientation_deg,localization_index_p95_over_mean,max_localization_over_mean,boundary_pixel_fraction
+45,0.02222222222222222,0.01589677109199029,83.39453155193456,51.948434123971744,1.8929745281385484,2.606739947938633,0.077265625
